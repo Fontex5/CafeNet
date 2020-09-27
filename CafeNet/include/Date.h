@@ -10,7 +10,8 @@ class Date
      unsigned int year;
 
     public :
-     void setDate(int , int , int);  //Sets date
+     Date(unsigned int , unsigned int , unsigned int);
+     void setDate(unsigned int ,unsigned int ,unsigned int);  //Sets date
      std::tuple<unsigned int ,unsigned int ,unsigned int> getDate() const;  //return each element of date
      void showDate() const;       //Shows date
 };
