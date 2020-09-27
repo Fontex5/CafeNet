@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1601206000 source:e:\code\c++\cafenet\cafenet\cafenet\src\date.cpp
+	"Date.h"
+	<iostream>
+
+1601205725 e:\code\c++\cafenet\cafenet\cafenet\include\date.h
+	<tuple>
+
