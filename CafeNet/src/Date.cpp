@@ -8,6 +8,8 @@ Date :: Date(unsigned int d=1 , unsigned int m=1 , unsigned int y=1){     //Init
     Date :: setDate(d , m , y);
 }
 
+Date::Date(){}
+
 void Date :: setDate (unsigned int d ,unsigned int m ,unsigned int y){   //Setting dates
     while(d<1 || d>31){   //check for invalid entries
         cout<<"Day is entered incorrectly , Enter again : ";

@@ -7,6 +7,8 @@ Account::Account(string &n , string &p , const Date d): Human(n,p,d)
     budget = 0;
 }
 
+Account::Account(){}
+
 void Account::Reserve_Computer(Computer &c){
     unsigned int h,m;
     cout<<"When do you want to use the Computer? (Enter hh  mm) ";

@@ -9,6 +9,7 @@ class Account : public Human
 {
     public:
         Account(std::string &, std::string & , const Date);
+        Accpount();
         void Reserve_Computer(Computer &);
         friend class Manager;
     private:

@@ -8,6 +8,7 @@ class Computer
 {
     public:
         Computer(const std::string &, const std::string & , const std::string &);
+        Computer();
 
         void setPrice(double &);
         double getPrice() const;

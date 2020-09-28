@@ -8,6 +8,8 @@ Computer::Computer(const string &i, const string &c , const string &r): id(i) , 
     finishT.setTime(0,0);
 }
 
+Computer::Computer(){}
+
 void Computer::setPrice(double &p){
     while(p>15000){
         cout<<"Hourly price can not be more than 15000T.\n"

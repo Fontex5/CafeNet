@@ -11,6 +11,7 @@ class Date
 
     public :
      Date(unsigned int , unsigned int , unsigned int);
+     Date();
      void setDate(unsigned int ,unsigned int ,unsigned int);  //Sets date
      std::tuple<unsigned int ,unsigned int ,unsigned int> getDate() const;  //return each element of date
      void showDate() const;       //Shows date

@@ -8,6 +8,8 @@ Human :: Human(string &n , string &p ,const Date bd):birthDate(bd){
     Human::setPhone(p);
 }
 
+Human::Human(){}
+
 void Human::setName(string &n){
     int temp=0;     //checking ASCII code of each character
     for(size_t i=0; i<n.size() ; ++i ){

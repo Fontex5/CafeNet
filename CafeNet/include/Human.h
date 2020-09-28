@@ -15,7 +15,7 @@ class Human
 
     public :
         Human(std::string &, std::string &, const Date);
-
+        Human();
         void setName(std :: string &);
         std::string getName() const;
 
