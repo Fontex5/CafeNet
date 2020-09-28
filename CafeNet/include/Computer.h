@@ -2,15 +2,30 @@
 #define COMPUTER_H
 
 #include<string>
+#include "Time.h"
 
 class Computer
 {
     public:
-        Computer();
+        Computer(const std::string &, const std::string & , const std::string &);
 
+        void setPrice(double &);
+        double getPrice() const;
+
+        void setStartTime(const Time &);
+        void setFinishTime (const Time &);
+
+        Time getStartTime() const;
+        Time getFinishTime() const;
 
     private:
-        std :: string
+        std :: string id;
+        std :: string cpu;
+        std :: string ram;
+        double price;
+        Time startT;
+        Time finishT;
+
 };
 
 #endif // COMPUTER_H

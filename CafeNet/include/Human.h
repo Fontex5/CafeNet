@@ -15,12 +15,21 @@ class Human
 
     public :
         Human(std::string &, std::string &, const Date);
+
         void setName(std :: string &);
-        std::string getName();
+        std::string getName() const;
+
         void setPhone(std :: string &);
-        std::string getPhone();
+        std::string getPhone() const;
+
         void setBirth(const Date);
-        Date getBirth();
+        Date getBirth() const;
+
+        void setUsername(std::string &);
+        std::string getUsername() const;
+
+        void setPassword(std::string &);
+        std::string getPassword() const;
 };
 
 #endif // HUMAN_H

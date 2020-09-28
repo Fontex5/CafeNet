@@ -6,8 +6,9 @@
 class Time
 {
     public:
-        void setTime(unsigned int &,unsigned int &);
+        void setTime(unsigned int ,unsigned int );
         std::tuple<unsigned int ,unsigned int> getTime();
+        void showTime()const;
         bool operator <(const Time &);
         bool operator >(const Time &);
         bool operator ==(const Time &);
