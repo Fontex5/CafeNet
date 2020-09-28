@@ -5,6 +5,7 @@
 #include <vector>
 #include "Computer.h"
 
+class Account;
 class Manager : public Human
 {
     public:
@@ -17,7 +18,7 @@ class Manager : public Human
         void Delete_Account(vector<Account> &);    //delete an account from list
 
         void Free_Computer(Computer &);        //Free a computer that has been reserved
-        void Rise_Budget(Account &);        //increase a users budget
+        void Rise_Budget(Account &);
 
 };
 

@@ -34,12 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Account.h" />
 		<Unit filename="include/Computer.h" />
 		<Unit filename="include/Date.h" />
 		<Unit filename="include/Human.h" />
 		<Unit filename="include/Manager.h" />
 		<Unit filename="include/Time.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Account.cpp" />
 		<Unit filename="src/Computer.cpp" />
 		<Unit filename="src/Date.cpp" />
 		<Unit filename="src/Human.cpp" />

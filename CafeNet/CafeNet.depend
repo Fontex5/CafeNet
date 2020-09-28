@@ -1,8 +1,50 @@
 # depslib dependency file v1.0
-1601206000 source:e:\code\c++\cafenet\cafenet\cafenet\src\date.cpp
+1601244743 source:e:\code\c++\cafenet\cafenet\cafenet\src\date.cpp
 	"Date.h"
 	<iostream>
 
-1601205725 e:\code\c++\cafenet\cafenet\cafenet\include\date.h
+1601238970 e:\code\c++\cafenet\cafenet\cafenet\include\date.h
 	<tuple>
+
+1601303476 source:e:\code\c++\cafenet\cafenet\cafenet\src\account.cpp
+	"Account.h"
+	<iostream>
+
+1601308469 e:\code\c++\cafenet\cafenet\cafenet\include\account.h
+	<Human.h>
+	"Computer.h"
+	<Manager.h>
+
+1601295265 e:\code\c++\cafenet\cafenet\cafenet\include\human.h
+	<string>
+	"Date.h"
+
+1601300595 e:\code\c++\cafenet\cafenet\cafenet\include\computer.h
+	<string>
+	"Time.h"
+
+1601302884 e:\code\c++\cafenet\cafenet\cafenet\include\time.h
+	<tuple>
+
+1601310808 e:\code\c++\cafenet\cafenet\cafenet\include\manager.h
+	<Human.h>
+	<vector>
+	"Computer.h"
+
+1601300879 source:e:\code\c++\cafenet\cafenet\cafenet\src\computer.cpp
+	"Computer.h"
+	<iostream>
+
+1601295265 source:e:\code\c++\cafenet\cafenet\cafenet\src\human.cpp
+	"Human.h"
+	<iostream>
+
+1601302929 source:e:\code\c++\cafenet\cafenet\cafenet\src\time.cpp
+	"Time.h"
+	<iostream>
+
+1601310786 source:e:\code\c++\cafenet\cafenet\cafenet\src\manager.cpp
+	"Manager.h"
+	"Account.h"
+	<iostream>
 
