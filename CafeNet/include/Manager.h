@@ -9,7 +9,7 @@ class Account;
 class Manager : public Human
 {
     public:
-        Manager(std::string & , std::string &, const Date);
+        Manager(std::string  , std::string , const Date);
 
         void Add_Computer(std::vector<Computer> &);     //add Computer to list
         void Delete_Computer(std::vector<Computer> &);  //delete a Computer from List
