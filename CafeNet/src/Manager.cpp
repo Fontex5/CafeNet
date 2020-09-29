@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-Manager::Manager(string &n , string &p , Date d) : Human(n , p , d)
+Manager::Manager(string n , string p , Date d) : Human(n , p , d)
 {
     string us="Manager";
     string pas="12345678";
