@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-Account::Account(string &n , string &p , const Date d): Human(n,p,d)
+Account::Account(string n , string p , const Date d): Human(n,p,d)
 {
     budget = 0;
 }
