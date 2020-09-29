@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Human :: Human(string &n , string &p ,const Date bd):birthDate(bd){
+Human :: Human(string &n , string &p ,const Date bd):birthDate(bd),password(""),username(""){
     Human::setName(n);
     Human::setPhone(p);
 }
