@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Computer::Computer(const string &i, const string &c , const string &r): id(i) , cpu(c) , ram(r){
+Computer::Computer(const string i, const string c , const string r): id(i) , cpu(c) , ram(r){
     startT.setTime(0, 0);
     finishT.setTime(0,0);
 }
