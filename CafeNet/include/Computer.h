@@ -18,6 +18,8 @@ class Computer
 
         Time getStartTime() const;
         Time getFinishTime() const;
+    
+        void Show_Computer()const;
 
     private:
         std :: string id;
