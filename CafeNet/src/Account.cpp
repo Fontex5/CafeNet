@@ -7,7 +7,7 @@ Account::Account(string n , string p , const Date d): Human(n,p,d)
     budget = 0;
 }
 
-Account::Account(){}
+Account::Account(){budget = 0;}
 
 void Account::Reserve_Computer(Computer &c){
     unsigned int h,m;
@@ -30,6 +30,27 @@ void Account::Reserve_Computer(Computer &c){
     cin>>h>>m;
 
     t.setTime(h,m);
-
     c.setFinishTime(t);
+    
+     if ((c.getFinishTime() - c.getStartTime()) < 0) {
+        cout << "Finish time can NOT be earlier than start Time!!\n" << endl;
+    }
+    else {
+        double cost;
+        cost = (c.getFinishTime() - c.getStartTime()) * (c.getPrice() / 60);
+        if (cost > budget) {
+            cout << "You don't have enough money. the cost will be " << cost << " Toman" << endl;
+        }
+        else {
+            budget -= cost;
+            cout << "Computer is reserved for you, Enjoy" << endl;
+        }
+    }
+}
+
+void Account::Show_Account() {
+    Date bd = this->getBirth();
+    cout << this->getName() << setw(10) << this->getPhone() << setw(10);
+    bd.showDate();
+    cout <<setw(10)<< this->getUsername()<<endl;
 }
