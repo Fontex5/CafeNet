@@ -61,6 +61,6 @@ bool Time::operator==(const Time &t){
 
 int Time::operator-(const Time& t) {
     int min;
-    min=(this->hour * 60)-(t.hour*60);
+    min=(this->hour * 60+this->minute)-(t.hour*60+t.minute);
     return min;
 }
