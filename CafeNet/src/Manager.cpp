@@ -10,7 +10,13 @@ Manager::Manager(string n , string p , Date d) : Human(n , p , d)
     setUsername(us);
     setPassword(pas);
 }
-
+Manager::Manager() 
+{
+    string us="Manager";
+    string pas="12345678";
+    setUsername(us);
+    setPassword(pas);
+}
 void Manager::Add_Computer(vector<Computer> &ComList){
     string id , cpu ,ram; // temp strings to read data from user
     cout<<"Enter computer ID: ";
