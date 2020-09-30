@@ -8,7 +8,7 @@ Date :: Date(unsigned int d=1 , unsigned int m=1 , unsigned int y=1){     //Init
     Date :: setDate(d , m , y);
 }
 
-Date::Date(){}
+Date::Date(){day = 1; month = 1; year = 1900;}
 
 void Date :: setDate (unsigned int d ,unsigned int m ,unsigned int y){   //Setting dates
     while(d<1 || d>31){   //check for invalid entries
@@ -40,5 +40,5 @@ tuple <unsigned int , unsigned int ,unsigned int> Date :: getDate()const{   //re
 void Date :: showDate () const {   // Showing date
     cout << year << "\\";
     cout << month << "\\";
-    cout << day << endl;
+    cout << day;
 }
