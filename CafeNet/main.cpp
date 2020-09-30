@@ -9,53 +9,70 @@ using namespace std;
 
 int main();
 
-vector<Computer> ComList;
+vector<Computer> ComList;     //List of Computers
 
-vector<Account> AccList;
+vector<Account> AccList;     //List of Accounts
+
+Manager m1;               //for one manager
 
 void Initialize();
 
-void Signin_Manager(Manager &);
+void Signin_Manager(Manager &);       //Sign in part for managers
 
-void Show_Manager_Menu(Manager &);
+void Show_Manager_Menu(Manager &);   //Showing manager's menu
 
-void Signin_Account();
+void Signin_Account();              //sign in part for users
 
-void Show_Account_Menu(Account &);
+void Show_Account_Menu(Account &);  //showing Account's menu
 
-void Show_all_PCs();
+void Show_all_PCs();        
 
 void Show_all_Accounts();
 
-void Exit();
+void Login();       //whether sign in as manager or account 
+
+void Exit();        //to save all lists in file (not complete yet)
 
 int main()
 {
-    Date bd(14, 10, 1998);
-    Manager m1("Mohammad", "011111111", bd);
-
     Initialize();
 
     cout << "Welcome to the System\n\n"
-        <<"=============================================================\n"<<endl;
-    cout << "Login as :\n1)Manager\n2)User\n" << endl;
-    char opt;
+
+    Login();
+}
+
+void Login() {
+    cout<<"=============================================================\n"<<endl;
+    cout << "Login as :\n1)Manager\n2)User\n3)Exit\n" << endl;
+    char opt;       //to read user's input
     cin >> opt;
-    while (opt != '1' && opt != '2') {
+    while (opt != '1' && opt != '2' && opt != '3') {
         cout << "Wrong number ! Enter again: ";
         cin >> opt;
     }
-    if (opt == '1') {
-        Signin_Manager(m1); 
-    }
-    if (opt == '2') {
+    switch (opt)
+    {
+    case '1':
+        Signin_Manager(m1);
+        break;
+    case '2':
         Signin_Account();
+        break;
+    case '3':
+        Exit();
+        break;
+    default:
+        break;
     }
 }
 
 void Initialize() {
+    Date bd(14, 10, 1998);
+    Manager m("Mohammad", "011111111", bd);
+    m1 = m; 
     
-    Date bd(20, 4, 1994);
+    bd.setDate(20, 4, 1994);
     Account a1("Ali", "098884142", bd);
     AccList.push_back(a1);
 
@@ -88,14 +105,14 @@ void Signin_Manager(Manager &m) {
     cout << "---------------------------------------------------------\n"<<endl;
     cout << "Enter Username: ";
     cin >> temp;
-    while ((temp != m.getUsername()) && (temp != "quit")) {
+    while ((temp != m.getUsername()) && (temp != "quit")) {      //check for input integrity 
         cout << "UserName not Found! Enter again or Enter \"quit\" to quit" << endl;
         cin >> temp;
     }
-    if (temp == m.getUsername()) {
+    if (temp == m.getUsername()) {     //when user is found
         cout << "Enter Password: ";
         cin >> temp;
-        while ((temp != m.getPassword()) && (temp != "quit")) {
+        while ((temp != m.getPassword()) && (temp != "quit")) {     //check for password integrity
             cout << "Wrong Password! Enter again or Enter \"quit\" to quit" << endl;
             cin >> temp;
         }
@@ -107,10 +124,11 @@ void Signin_Manager(Manager &m) {
                 cout << "Do you want to do anything else ? (y/n)  ";
                 cin >> ch;
             } while (ch != 'n' && ch != 'N');
+            Login();
         }
     }
     else {
-        Exit();
+        Login();
     }
 }
 
@@ -171,13 +189,13 @@ void Show_Manager_Menu(Manager &m) {
 void Signin_Account() {
     cout << "----------------------------------------------------------------\n" << endl;
     cout << "Enter Username: ";
-    string temp;
+    string temp;       //to save user's input
     cin >> temp;
     for (auto item : AccList) {
-        if (temp == item.getUsername()) {
+        if (temp == item.getUsername()) {      //user is found
             cout << "Enter Password: ";
             cin >> temp;
-            while (temp != item.getPassword() && temp != "quit") {
+            while (temp != item.getPassword() && temp != "quit") {     //check password integrity
                 cout << "Wrong Password! Enter again or Enter \"quit\" to quit" << endl;
                 cin >> temp;
             }
@@ -189,6 +207,7 @@ void Signin_Account() {
                     cout << "Do you want to do anything else ? (y/n)  ";
                     cin >> ch;
                 } while (ch != 'n' && ch != 'N'); 
+                Login();
             }
             else { 
                 cout << "Account not Found."<<endl;
@@ -196,6 +215,7 @@ void Signin_Account() {
             }
         }
     }
+    Login();
 }
 
 void Show_Account_Menu(Account& a) {
