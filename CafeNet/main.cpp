@@ -55,24 +55,17 @@ int main()
 }
 
 void Initialize() {
-    string username;
     
     Date bd(20, 4, 1994);
     Account a1("Ali", "098884142", bd);
-    username = "Ali";
-    a1.setUsername(username);
     AccList.push_back(a1);
 
     bd.setDate(2, 8, 2000);
     Account a2("Sadegh", "08644843", bd);
-    username = "Sadegh";
-    a2.setUsername(username);
     AccList.push_back(a2);
 
     bd.setDate(5, 9, 1990);
     Account a3("Saeed", "094483133", bd);
-    username = "Saeed";
-    a3.setUsername(username);
     AccList.push_back(a3);
 
     double price = 15000;
