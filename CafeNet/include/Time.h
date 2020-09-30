@@ -12,7 +12,7 @@ class Time
         bool operator <(const Time &);
         bool operator >(const Time &);
         bool operator ==(const Time &);
-
+        int  operator -(const Time&);
     private:
         unsigned int hour;
         unsigned int minute;
