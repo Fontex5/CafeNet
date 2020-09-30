@@ -219,7 +219,7 @@ void Show_all_PCs() {
     cout <<setw(7) << "ID" << setw(10) << "CPU" << setw(10) << "RAM" << setw(10) << "Price" << setw(10) << "Reserved" << endl;
     int i = 0;
     for (auto item : ComList) {
-        cout << i<<")"<<setw(10);
+        cout << i<<")"<<setw(5);
         item.Show_Computer();
         i++;
     }
@@ -229,7 +229,7 @@ void Show_all_Accounts() {
     cout << setw(7) << "Name" << setw(10) << "Phone Number" << setw(10) << "Birth Date" << setw(10) << "Username" << endl;
     int i = 0;
     for (auto item : AccList) {
-        cout << i << ")" << setw(10);
+        cout << i << ")" << setw(5);
         item.Show_Account();
         i++;
     }
