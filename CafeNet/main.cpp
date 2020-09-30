@@ -46,8 +46,7 @@ int main()
         cin >> opt;
     }
     if (opt == '1') {
-        Signin_Manager(m1);
-        //To do anything else
+        Signin_Manager(m1); 
     }
     if (opt == '2') {
         Signin_Account();
@@ -86,6 +85,7 @@ void Initialize() {
 
 void Signin_Manager(Manager &m) {
     string temp;       //User's inputs
+    cout << "---------------------------------------------------------\n"<<endl;
     cout << "Enter Username: ";
     cin >> temp;
     while ((temp != m.getUsername()) && (temp != "quit")) {
@@ -99,7 +99,15 @@ void Signin_Manager(Manager &m) {
             cout << "Wrong Password! Enter again or Enter \"quit\" to quit" << endl;
             cin >> temp;
         }
-        if (temp == m.getPassword()) { Show_Manager_Menu(m); }
+        if (temp == m.getPassword()) { 
+            char ch;
+            do {
+                Show_Manager_Menu(m);
+                cout << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n" << endl;
+                cout << "Do you want to do anything else ? (y/n)  ";
+                cin >> ch;
+            } while (ch != 'n' && ch != 'N');
+        }
     }
     else {
         Exit();
@@ -108,6 +116,7 @@ void Signin_Manager(Manager &m) {
 
 void Show_Manager_Menu(Manager &m) {
     int option;
+    cout << "============================================================\n" << endl;
     cout << "Select an option: " << endl;
     cout << "1)Showing all Computer\n2)Adding a Computer\n3)Delete a Computer\n"
         "4)Show All Acounts\n5)Add an Account\n6)Delete an Account\n"
@@ -117,6 +126,7 @@ void Show_Manager_Menu(Manager &m) {
         cout << "Wrong Number!\nEnter again: ";
         cin >> option;
     }
+    cout << "============================================================\n" << endl;
     switch (option)
     {
         int i;
@@ -159,6 +169,7 @@ void Show_Manager_Menu(Manager &m) {
 }
 
 void Signin_Account() {
+    cout << "----------------------------------------------------------------\n" << endl;
     cout << "Enter Username: ";
     string temp;
     cin >> temp;
@@ -170,7 +181,15 @@ void Signin_Account() {
                 cout << "Wrong Password! Enter again or Enter \"quit\" to quit" << endl;
                 cin >> temp;
             }
-            if (temp == item.getPassword()) { Show_Account_Menu(item); }
+            if (temp == item.getPassword()) {
+                char ch;
+                do {
+                    Show_Account_Menu(item);
+                    cout << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n" << endl;
+                    cout << "Do you want to do anything else ? (y/n)  ";
+                    cin >> ch;
+                } while (ch != 'n' && ch != 'N'); 
+            }
             else { 
                 cout << "Account not Found."<<endl;
                 break;
@@ -180,6 +199,7 @@ void Signin_Account() {
 }
 
 void Show_Account_Menu(Account& a) {
+    cout << "============================================================\n" << endl;
     cout << "Select an option: " << endl;
     cout << "1)Reserve a Computer\n2)Change Username\n3)Change Password\n4)Exit\n" << endl;
     int option;
@@ -188,6 +208,7 @@ void Show_Account_Menu(Account& a) {
         cout << "Wrong Option! Enter again: ";
         cin >> option;
     }
+    cout << "============================================================\n" << endl;
     string temp;  //temp for user's inputs
     int i = 0;
     switch (option) {
