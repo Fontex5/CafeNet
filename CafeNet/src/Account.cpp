@@ -16,7 +16,7 @@ void Account::Reserve_Computer(Computer &c){
 
     Time t;
     t.setTime(h,m);
-    while(t==c.getStartTime() || t>c.getStartTime()){
+    while(t==c.getStartTime() || t < c.getFinishTime()){
         cout<<"This Computer is reserved at that time.\n"
         <<"Computer is reserved until: ";
         c.getFinishTime().showTime();
