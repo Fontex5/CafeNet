@@ -11,6 +11,7 @@ class Account : public Human
         Account(std::string , std::string  , const Date);
         Accpount();
         void Reserve_Computer(Computer &);
+        void Show_Account();
         friend class Manager;
     private:
         double budget;
